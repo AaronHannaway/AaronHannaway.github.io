@@ -1,0 +1,195 @@
+* {
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+html, body, p {
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+
+}
+
+html, body {
+
+  width: 100%;
+  height: 100%;
+
+}
+
+body {
+
+  background: #f4f4f4;
+  font-family: 'Hind', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+}
+
+.text {
+
+  padding: 35px;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+.text p {
+
+  color: #313132;
+  margin: 0;
+  font-weight: 300;
+
+
+}
+
+.text a {
+
+  text-decoration: none;
+  color: #313132;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+
+}
+
+.text a:after {
+
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 20%;
+  height: 2px;
+  width: 0;
+  background: #313132;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.text a:hover:after { width: 100%; }
+
+.text a.active:after {
+
+  bottom: 48%;
+  width: 100%;
+
+}
+
+.text ul {
+
+  margin: 30px 0 0;
+  padding: 30px 0 0;
+  display: table;
+  width: 100%;
+  position: relative;
+
+}
+
+.text ul:before {
+
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background: #313132;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+}
+
+.text ul li {
+
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+  display: table-cell;
+  text-align: center;
+
+}
+
+.text ul li a {
+
+  font-size: 1.6rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+
+}
+
+.text ul li a:hover { opacity: 0; cursor: default; }
+
+.text ul li a:after { display: none; }
+
+.text ul.active:before { width: 100%; }
+
+.text ul.active li a { opacity: 1; }
+
+.text ul.active li a:hover { opacity: 0.5; cursor: pointer; }
+
+@media only screen and (min-width : 768px) {
+
+  body {
+
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+
+  }
+
+  .text { padding: 60px; }
+
+  .text a:after {
+
+    bottom: 16%;
+    height: 3px;
+
+  }
+
+  .text ul {
+
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: auto;
+
+  }
+
+  .text ul:before { display: none; }
+
+  .text ul li {
+
+    display: inline-block;
+
+  }
+
+}
+
+@media only screen and (min-width : 991px) {
+
+  .text { max-width: 700px; }
+
+}
